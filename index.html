@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Upgrade VIP & Pengamanan Aset | CiledugPromo</title>
+    <meta name="description" content="Dokumen rahasia pengamanan aset digital dan upgrade VIP kemitraan jasa saluran mampet CiledugPromo.">
+    <meta name="theme-color" content="#070709">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #070709;
+            --card-bg: #121215;
+            --gold: #d4af37;
+            --gold-light: #f9d77e;
+            --red-alert: #ef4444;
+            --text-main: #ffffff;
+            --text-muted: #9ca3af;
+            --border-glow: rgba(212, 175, 55, 0.3);
+            --green-success: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+        
+        .alert-banner { background: rgba(239, 68, 68, 0.1); border-bottom: 2px solid var(--red-alert); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        .alert-banner h1 { color: var(--red-alert); font-size: 14px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; animation: pulse 2s infinite; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+        .header-brand { text-align: center; margin-top: 30px; margin-bottom: 20px; }
+        .logo-img { width: 80px; height: 80px; object-fit: cover; border-radius: 16px; border: 2px solid var(--gold); box-shadow: 0 10px 20px rgba(0,0,0,0.6), 0 0 15px rgba(212, 175, 55, 0.3); }
+
+        .page-title { text-align: center; margin-bottom: 40px; }
+        .page-title h2 { font-size: 28px; font-weight: 900; text-transform: uppercase; line-height: 1.2; }
+        .page-title h2 span { color: var(--gold); }
+        .page-title p { color: var(--text-muted); margin-top: 10px; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; }
+
+        .card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.4); position: relative; overflow: hidden; }
+        .card-red { border-left: 4px solid var(--red-alert); }
+        .card-gold { border-left: 4px solid var(--gold); }
+        .card h3 { font-size: 20px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .card-red h3 { color: var(--red-alert); }
+        .card-gold h3 { color: var(--gold); }
+        .card p { color: #d1d5db; margin-bottom: 15px; font-size: 15px; }
+        
+        .timeline { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+        .timeline-item { display: flex; align-items: flex-start; gap: 15px; background: rgba(255,255,255,0.02); padding: 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+        .timeline-number { background: var(--gold); color: #000; width: 28px; height: 28px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+        .timeline-content h4 { font-size: 15px; color: #fff; margin-bottom: 3px; }
+        .timeline-content p { font-size: 13px; color: var(--text-muted); margin: 0; }
+
+        .proof-gallery { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; margin-bottom: 20px; }
+        .proof-img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border-glow); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+        .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+        .pricing-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 25px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+        .pricing-card.vvip { border: 2px solid var(--gold); background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, rgba(18,18,21,1) 100%); transform: scale(1.02); z-index: 10; box-shadow: 0 20px 40px rgba(212,175,55,0.15); }
+        .badge-best { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #000; font-size: 11px; font-weight: 900; padding: 4px 15px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        .pricing-title { font-size: 22px; font-weight: 900; margin-bottom: 10px; }
+        .vvip .pricing-title { color: var(--gold); }
+        .price { font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 5px; }
+        .price span { font-size: 14px; color: var(--text-muted); font-weight: normal; }
+        
+        .feature-list { list-style: none; margin: 20px 0; text-align: left; flex-grow: 1; }
+        .feature-list li { font-size: 13px; color: #d1d5db; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;}
+        .feature-list li::before { content: '✓'; color: var(--gold); font-weight: bold; }
+
+        .bonus-box { background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.2); padding: 15px; border-radius: 8px; margin-top: 15px; text-align: left; }
+        .speed-box { background: rgba(16, 185, 129, 0.05); border: 1px solid var(--green-success); padding: 15px; border-radius: 8px; margin-top: 15px; }
+
+        .payment-card { background: linear-gradient(145deg, #1a1a24, #121215); border: 1px solid var(--gold); border-radius: 12px; padding: 30px; margin-top: 40px; text-align: center; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1); }
+        .bank-info { background: #fff; color: #000; padding: 20px; border-radius: 8px; display: inline-block; margin: 20px 0; text-align: left; min-width: 250px; }
+        .bank-logo { font-size: 24px; font-weight: 900; color: #005A9C; margin-bottom: 10px; letter-spacing: 1px; } 
+        .rekening { font-size: 28px; font-weight: 900; font-family: monospace; letter-spacing: 2px; }
+
+        .btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 15px; border-radius: 8px; text-align: center; font-weight: 900; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; font-size: 13px; margin-top: 10px; }
+        .btn-outline { background: transparent; border: 1px solid #fff; color: #fff; }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+        .btn-gold { background: linear-gradient(135deg, var(--gold), #b8860b); color: #000; border: none; box-shadow: 0 5px 15px rgba(212,175,55,0.3); }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(212,175,55,0.5); }
+        .btn-blue { background: transparent; border: 1px solid #3b82f6; color: #3b82f6; padding: 10px; font-size: 11px; }
+        .btn-blue:hover { background: rgba(59, 130, 246, 0.1); }
+        .btn-wa { background: #25D366; color: #000; font-size: 16px; padding: 18px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); }
+        .btn-wa:hover { background: #1ebd5a; transform: translateY(-3px); }
+
+        .footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: #6b7280; font-size: 12px; }
+
+        @media (max-width: 768px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+            .pricing-card.vvip { transform: scale(1); margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="alert-banner">
+        <h1>⚠️ PERINGATAN: POSISI JASA ANDA SAAT INI TIDAK AMAN</h1>
+    </div>
+
+    <div class="container">
+        
+        <header class="header-brand">
+            <img src="logo-ciledugpromo.jpg" alt="Ciledug Promo Official Logo" class="logo-img" width="80" height="80">
+        </header>
+
+        <div class="page-title">
+            <h2>PROPOSAL <span>PENGAMANAN ASET</span> & UPGRADE VIP</h2>
+            <p>Dokumen Rahasia - Khusus Mitra Jasa Saluran Mampet Terpilih</p>
+        </div>
+
+        <div class="card card-red">
+            <h3>🩸 Kebocoran Orderan & Lelang Slot Ciledug</h3>
+            <p>Saat ini, karena Anda berada di slot Gratis, <strong>Tombol WhatsApp Darurat Anda mati</strong>. Pelanggan Ciledug yang sedang panik karena WC meluap akhirnya memilih mengklik WA kompetitor yang memiliki tombol aktif.</p>
+            <p><strong>Penting:</strong> Slot VVIP dengan fitur Tombol Chat Langsung hanya tersedia untuk <strong>1 Mitra Utama</strong> per wilayah kecamatan. Begitu kompetitor Anda mengambil slot ini, nama jasa Anda akan <strong>TERGUSUR & DIHAPUS PERMANEN</strong> dari daftar rekomendasi kami.</p>
+        </div>
+
+        <div class="card card-gold">
+            <h3>🛡️ Study Case: Dominasi Rohim Sedot WC</h3>
+            <p>Kami telah membuktikan kekuatan sistem kami pada mitra kami, <strong>Rohim Sedot WC</strong>. Lihat bagaimana beliau kini memonopoli seluruh kata kunci "Saluran Mampet" dan "Sedot WC" di area Tangerang Selatan (Bintaro, Pondok Aren, Ciputat)[cite: 141].</p>
+            
+            <div class="proof-gallery">
+                <img src="bukti-page1-rohim.jpg" alt="Bukti Rohim Sedot WC Merajai Page 1 Google" class="proof-img" loading="lazy">
+                <p style="font-size: 12px; color: var(--gold); text-align: center;">Tampilan Ratusan Kata Kunci Rohim Sedot WC yang Berhasil Kami Indeks di Halaman 1-3 Google[cite: 31, 55, 79].</p>
+            </div>
+
+            <p><strong>Fakta Lapangan:</strong> 90% pencari jasa mampet hanya mengeklik hasil di Halaman 1[cite: 31]. Jika Anda tidak ada di sana dengan tombol WA aktif, Anda tidak akan pernah mendapatkan orderan dari internet.</p>
+        </div>
+
+        <h2 style="text-align: center; margin-top: 50px; font-size: 24px; text-transform: uppercase;">Pilih Jalur Dominasi Anda</h2>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div>
+                    <h3 class="pricing-title">VIP BASIC</h3>
+                    <div class="price">Rp 299rb<span> / Tahun</span></div>
+                    <ul class="feature-list">
+                        <li>Kunci Posisi di Ciledug (Anti Tergusur)</li>
+                        <li>Aktivasi Tombol WhatsApp Darurat</li>
+                        <li>Aktivasi Link Navigasi Google Maps</li>
+                    </ul>
+                    
+                    <div class="bonus-box">
+                        <span style="font-size: 11px; color: var(--gold); font-weight: bold; text-transform: uppercase;">🎁 Bonus Spesial:</span>
+                        <p style="font-size: 12px; color: #fff; margin: 5px 0;">1x Artikel Liputan Profil Usaha Anda di Portal CiledugPromo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-card vvip">
+                <div class="badge-best">Tahta Tertinggi</div>
+                <div>
+                    <h3 class="pricing-title">VVIP ULTIMATE</h3>
+                    <div class="price">Rp 749rb<span> / Tahun</span></div>
+                    <ul class="feature-list">
+                        <li><strong>Semua Fitur VIP Basic</strong></li>
+                        <li>Tampilan Kotak Emas VVIP (High Conversion)</li>
+                        <li><strong>1x Artikel Review Eksklusif (Gaya SW Jaya Motor)</strong></li>
+                        <li>Pembuatan Website Premium (Vercel Speed 100)</li>
+                    </ul>
+
+                    <div class="speed-box">
+                        <p style="font-size: 12px; color: #fff; margin-bottom: 10px; font-weight: bold;">🚀 Contoh Website Premium Vercel:</p>
+                        <a href="https://rohim-sedot-wc.vercel.app/" target="_blank" class="btn btn-gold" style="font-size: 11px; padding: 10px;">🌐 LIHAT WEBSITE ROHIM SEDOT WC</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-card">
+            <h3 style="color: #fff; font-size: 22px; margin-bottom: 10px;">LAKUKAN PEMBAYARAN & KUNCI WILAYAH</h3>
+            <p style="color: var(--text-muted); font-size: 14px;">Segera transfer sesuai paket yang dipilih untuk mengamankan aset digital Anda sebelum diambil alih kompetitor lain.</p>
+            
+            <div class="bank-info">
+                <div class="bank-logo">Bank BCA</div>
+                <div class="rekening">7655432353</div>
+                <div style="font-size: 16px; font-weight: bold; margin-top: 5px; color: #444;">A.n: SUTATO</div>
+            </div>
+
+            <a href="https://wa.me/6285283212205?text=Halo%20Admin%20CiledugPromo,%20saya%20sudah%20melakukan%20Transfer%20untuk%20Upgrade%20VVIP%20Jasa%20Saluran%20Mampet.%0A%0ABerikut%20Bukti%20Transfernya:" target="_blank" class="btn btn-wa">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+                KONFIRMASI PEMBAYARAN & UPGRADE
+            </a>
+        </div>
+
+        <footer class="footer">
+            <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed rgba(212, 175, 55, 0.3); display: flex; flex-direction: column; align-items: center; gap: 5px;">
+                <span style="font-size: 11px; color: #777; letter-spacing: 2px; text-transform: uppercase;">Sponsor & Rekening Resmi:</span>
+                <a href="https://ciledugpromo.biz.id" target="_blank" style="color: var(--gold); font-weight: 900; font-size: 18px; text-decoration: none; text-transform: uppercase;">
+                    CILEDUGPROMO.BIZ.ID
+                </a>
+            </div>
+            &copy; 2026 CiledugPromo - Sutato Digital Group<br>
+            Dokumen Proposal Rahasia. Dilarang menyebarluaskan.
+        </footer>
+
+    </div>
+
+</body>
+</html>
